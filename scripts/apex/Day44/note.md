@@ -1,4 +1,4 @@
-Inheritance
+# Inheritance : 
 
 Inheritance is a concept in object-oriented programming where a new class is created from an existing class, inheriting its properties and behaviors. The new class is called the subclass or derived class, while the existing class is called the superclass or base class.
 
@@ -22,9 +22,9 @@ Assuming that's the case, here is how the syntax look like
    }
    ```
 
-virtual keyword :
+# virtual keyword :
 
-When used on class:
+# When used on class:
 It will allow this class to be Super|Parent class
 
 ```java
@@ -36,11 +36,11 @@ public class Dog extends Animal{
     public String breed; 
 }
 ```
-When used on method:
+# When used on method:
 allow this method to be overridden in the child class methods
 for example if animal class have a method called makeNoise
 
-```java
+ ```java
  public virtual void makeNoise(){
     // animal general noise
  }
@@ -56,10 +56,10 @@ Now in the child class Dog we can override this method by including override key
  ```
 
 
-abstract
+# abstract
 abstract literally means : existing in thought or as an idea but not having a physical or concrete existence. In OOP, we can use abstract keyword on class and methods
 
-When used on the class :
+# When used on the class :
 
 The class can not be instantiated
 YourClass y1 = new YourClass() will not compile
@@ -74,9 +74,9 @@ public abstract class Car{
 }
 ```
 
-When used on the method
+# When used on the method
 
-ONLY ABSTRACT CLASS CAN HAVE ABSTRACT METHOD
+# ONLY ABSTRACT CLASS CAN HAVE ABSTRACT METHOD
 the method become abstract method
 the method can not have a body { }
 it ends with semi colon ;
@@ -91,7 +91,7 @@ public class GasCar{
 }
 ```
 
-Constructor
+# Constructor
 Constructors are not inherited
 
 however you can call constructor of super class in the child class using super( parameters goes here)
