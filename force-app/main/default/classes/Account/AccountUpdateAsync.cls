@@ -25,7 +25,12 @@ public class AccountUpdateAsync implements Queueable{
 
         }
         update accLstToProcess ; 
-        
+
+        // Right after we are done with account update 
+        // we want to perform another aysnc code 
+        // that need to happen right after account update
+
+    
 
         
     }

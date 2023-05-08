@@ -4,7 +4,7 @@ private class ScheduledTaskCleanUpTest {
 
     @TestSetup
     static void createTestData(){
-        // arrange 
+        // Arrange 
         List<Task> allTasks = new List<Task>(); 
 
         for(Integer i=1; i<=10 ;i++) {
@@ -25,9 +25,10 @@ private class ScheduledTaskCleanUpTest {
 
         Schedulable stc = new ScheduledTaskCleanUp();
         System.schedule('Task cleanup', '0 0 0 15 3 ? 2042', stc ) ; 
-        // before Test.stopTest line run, assert Completed Task count is 0 
+        // before Test.stopTest line run, assert Completed Task count is 0  
         List<Task> theTasksBeforeScheduleRun = [SELECT Id FROM Task WHERE Status = 'Completed'];
         Assert.areEqual(0, theTasksBeforeScheduleRun.size() );
+        // the above two line is EXTRA to test the task is 0 to make sure in the Assert line the test is running in correct way 
 
         Test.stopTest() ; // after this line scheduled apex code will forced to run right away
 

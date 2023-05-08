@@ -1,6 +1,9 @@
 // you can  use Database.Batchable<YourSpecificSObjectType> instead of Database.Batchable<sObject>
 // only if you return Iterable<YourSpecificSObjectType> instead of Database.QueryLocator
 // for the start method , otherwise it will not compile 
+
+
+// ##  Database.Stateful  job is to let each batch know about each other 
 public class OverdueOppProcessor implements Database.Batchable<sObject> , Database.Stateful{
     
     // create a instance variable to keep track of total number of record processed
@@ -61,8 +64,7 @@ public class OverdueOppProcessor implements Database.Batchable<sObject> , Databa
                         + ' Number of Error is ' + result.NumberOfErrors
                         + ' JobItemsProcessed is ' + result.JobItemsProcessed
                         + ' TotalJobItems is ' + result.TotalJobItems 
-                        + ' Total record processed ' + this.totalProcessed 
-                        ; 
+                        + ' Total record processed ' + this.totalProcessed ; 
         
         String subject = 'The job with Id ' + jobId +  ' is ' + result.Status ;
 

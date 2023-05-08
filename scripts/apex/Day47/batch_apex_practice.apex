@@ -1,5 +1,5 @@
 
-// this line to create a list of 500 opps run it one time and it work 
+// This line to create a list of 500 opps run it one time and it work 
 // List<Opportunity> myOpps = Utils.getManyOpps('Batch Opp', 500, true);
 // System.debug('myOpps value is : ' + myOpps);
 

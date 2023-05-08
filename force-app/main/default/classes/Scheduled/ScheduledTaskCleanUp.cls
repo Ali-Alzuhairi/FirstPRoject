@@ -10,8 +10,7 @@ public class ScheduledTaskCleanUp implements Schedulable {
         List<Task> updatedTasks = new List<Task>();
 
         for(Task each : [SELECT Id, Subject, ActivityDate, Status
-                         FROM Task
-                         WHERE ActivityDate< TODAY ]) {
+                         FROM Task WHERE ActivityDate< TODAY ]) {
             
           each.Status = 'Completed';
           updatedTasks.add(each);  
