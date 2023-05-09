@@ -1,11 +1,11 @@
-// create a varible :
+// create a variable :
 // annualRevenue as Integer and initialize it's value 
 //rating as String 
 
 /*If the annualRevenue Greater then 10000
 assign the value or rating to hot 
 otherwise assign the value of rating to cold 
-printing out the rating varible out side your if statemnt 
+printing out the rating variable out side your if statement 
 
 */
 /*
@@ -86,14 +86,14 @@ if( score2>100 || score2 <0 ){
 }
 
 
-// declare a String varible called season 
+// declare a String variable called season 
 
 String season = 'summer';
 
 if (season =='spring'){
     System.debug('Camping');
 }else if (season== 'fall'){
-    System.debug('pick pumkin');
+    System.debug('pick pumpkin');
 }else if (season =='winter'){
     System.debug('Go sleep');
 }else if (season =='summer'){
