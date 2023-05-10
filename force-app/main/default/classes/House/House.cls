@@ -14,7 +14,7 @@ public class House {
     public Boolean hasGarage ; 
     public Integer squareFootage; 
 
-    public House(){
+    public House(){ // empty constructor with no param
         System.debug('constructor no param'); 
         
     }
@@ -25,10 +25,11 @@ public class House {
 
  public House (String style, Integer year, 
                Boolean hasGarage, Integer squareFootage){
-  this.style     = style;
-  this.year      = year;
-  this.hasGarage = hasGarage;
-  this.squareFootage = squareFootage;
+//   this.style     = style;
+//   this.year      = year;
+//   this.hasGarage = hasGarage;
+//   this.squareFootage = squareFootage;
+  this(style,year,hasGarage,squareFootage); // we can use this like the up code
 
 
 
