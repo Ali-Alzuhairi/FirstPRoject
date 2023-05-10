@@ -5,7 +5,7 @@ trigger OpportunityTrigger on Opportunity(
   after update,
   before delete
 ) {
-  // printing out the operation type for better debugging experience
+  // print out the operation type for better debugging experience
   System.debug('Trigger is running for Event : ' + Trigger.operationType);
 
   // Requirement :
@@ -23,9 +23,18 @@ trigger OpportunityTrigger on Opportunity(
     for (Opportunity each : Trigger.new) {
       // Trigger.oldMap =>  Map<Id,Opportunity> with old fields value
       Opportunity oldOp = Trigger.oldMap.get(each.Id);
-      System.debug('New Stage value ' + each.StageName);
-      System.debug('Old Stage value ' + oldOp.StageName);
+      // if the stageName has CHANGED to Closed Won
+      if( each.StageName!=oldOp.StageName && each.StageName=='Closed Won'){
+        
+        Task t = new Task(); 
+        t.Subject       = 'Follow up with renewal ' + each.Name; 
+        t.ActivityDate  = Date.today() + 1 ; 
+        t.WhatId        = each.Id ; 
+        taskList.add(t);  
+      }
     }
+    // outside the loop , add insert one time 
+    insert taskList ; 
   }
 
   // Requirement :
