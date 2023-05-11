@@ -22,7 +22,7 @@ private class AddPrimaryContactTest {
         //Assert 
         //check result
         List<Contact> contacts = 
-            [SELECT Id from Contact WHERE Contact.Account.BillingState='CA']; 
+            [SELECT Id FROM Contact WHERE Contact.Account.BillingState='CA']; 
          System.debug('contacts size ' + contacts);
         
         Assert.areEqual(50, contacts.size()) ; 
