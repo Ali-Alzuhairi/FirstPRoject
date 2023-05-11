@@ -1,6 +1,6 @@
 List<ElectricCar> carLst = new List<ElectricCar>() ; 
-carLst.add(  new ElectricCar('Tesla X', 65000 , 10)  ) ; 
-carLst.add(  new ElectricCar('Tesla Y', 55000 , 9)   ) ; 
+carLst.add(  new ElectricCar('Tesla X', 165000 , 10)  ) ; 
+carLst.add(  new ElectricCar('Tesla Y', 95000 , 9)   ) ; 
 carLst.add(  new ElectricCar('Tesla 3', 75000 , 11)  ) ; 
 
 Dealership d1 = new Dealership('Tesla D', carLst);

@@ -31,6 +31,9 @@ public class Dealership {
         
 
     }
+    public void addCar(ElectricCar newCar){
+        eCars.add(newCar);
+    }
 
 
 
