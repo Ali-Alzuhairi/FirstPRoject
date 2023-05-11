@@ -5,8 +5,9 @@ public class AccountUpdateAsync implements Queueable{
 
 
     public AccountUpdateAsync(String description, List<Account> accLstToProcess) {
-        this.description = description ; 
-        this.accLstToProcess = accLstToProcess ; 
+        this.description     = description ;               //           <----------------|
+        this.accLstToProcess = accLstToProcess ;           //           <----------------|
+        // we can use this(description,accLstToProcess); instead of the above code ----->|
     }
 
 
@@ -29,7 +30,12 @@ public class AccountUpdateAsync implements Queueable{
         // Right after we are done with account update 
         // we want to perform another aysnc code 
         // that need to happen right after account update
+        // we Create another Class called TaskAfterAccountUpdate
 
+        // this called chaining Job to another Job 
+        // the below code will run right after the top Line Run just to make it in order 
+        TaskAfterAccountUpdate tq = new TaskAfterAccountUpdate();
+        System.enqueueJob(tq);
     
 
         

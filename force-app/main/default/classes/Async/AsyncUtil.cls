@@ -19,7 +19,8 @@ public class AsyncUtil {
         System.debug('boiling water....'); 
     }
 
-
+    // we Can not use sObject as parameters -----|
+    //                                           |
     @future
     public static void updateCurrentUserRoleToCFO(){
 
