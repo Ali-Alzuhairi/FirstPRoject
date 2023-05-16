@@ -2,7 +2,7 @@
 // Print out the response status code , body 
 
 // In order to be able to send api request from salesforce to external app 
-// the utl must be added into Remote Site setting in setup 
+// the url must be added into Remote Site setting in setup 
 
 // Http Class from Apex is used to send API request from Salesforce 
 Http h = new Http(); 
@@ -26,7 +26,7 @@ System.debug('Content-Type header value ' +  res.getHeader('content-type')      
 // to turn JSON into Apex Type  (De-serialization)
 // or to turn Apex Type into JSON (serialization)
 
-// Use JSON.deserializeUntyped to turn a json String to object 
+// Use JSON.deserializeUntyped to turn a JSON String to object 
 // cast the type object to (Map<String,Object>) 
 Map<String,Object> resultMap = (Map<String,Object>) JSON.deserializeUntyped(  res.getBody()  ) ; 
 
@@ -34,4 +34,4 @@ System.debug('resultMap value is : ' + resultMap);
 System.debug('resultMap.get(\'name\') value is : '   + resultMap.get('name'));
 System.debug('resultMap.get(\'gender\') value is : ' + resultMap.get('gender'));
 System.debug('resultMap.get(\'id\') value is : '     + resultMap.get('id'));
-System.debug('resultMap.get(\'phone\') value is : '  + resultMap.get('phone'));
+System.debug('resultMap.get(\'phone\') value is : '  + resultMap.get('phone')); 
