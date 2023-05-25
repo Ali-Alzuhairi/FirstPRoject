@@ -33,12 +33,15 @@ export default class Practice6 extends LightningElement {
     console.log(event.target.label);
     console.log(event.target.checked);
       this.graduated = event.target.checked;
+
       
-    if (this.hired === true && this.graduated === true) {
-        this.promoted = true; 
-    } else {
-        this.promoted = false; 
-    }
+    // if (this.hired === true && this.graduated === true) {
+    //     this.promoted = true; 
+    // } else {
+    //     this.promoted = false; 
+    // }
+    // same as above code but the bottom is one liner code 
+    this.promoted = this.hired && this.graduate ; 
       
   }
 }
