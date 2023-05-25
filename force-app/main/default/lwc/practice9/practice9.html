@@ -10,14 +10,23 @@
             options={options}
             onchange={handleChange} ></lightning-combobox>
         
-            <template lwc:if={selectedValue}>
-                <p>You have Selected {selectedValue} State</p>
-            </template>
-        
+        <!-- as a practice
+        only show this when user selected a state -->
+        <!-- usually we will need another getter to check selected value is 
+        not empty null or undefined 
+        however if you provide string or object directly
+        lwc:if will automatically check if it's null empty undefined for you 
+        if it not empty undefined or null it will display 
+        else it will not display -->
+        <template lwc:if={selectedValue}>
+          <p>You have Selected {selectedValue} State</p>
+        </template>
+        <!-- else display : Please select state in p element -->
 
-        <!-- Conditionally display below paragraph -->
-        <template lwc:if={isCapitalArea}> 
-            <p>You have selected Capital Area</p>
+        <!-- Conditionally display below Paragraph 
+        if user selected either MD or VA -->
+        <template lwc:if={isCapitalArea}>
+            <p>You have selected Capital Area </p>
         </template>
         
 
@@ -25,4 +34,3 @@
   
     </lightning-card>
   </template>
- 
