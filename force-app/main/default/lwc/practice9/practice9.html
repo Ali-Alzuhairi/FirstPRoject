@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Practice 9 - Picklist" icon-name="standard:picklist_choice">
+      <div class="slds-var-m-around_medium">
+        
+        <lightning-combobox
+            name="State"
+            label="State"
+            value={selectedValue}
+            placeholder="Select State"
+            options={options}
+            onchange={handleChange} ></lightning-combobox>
+        
+            <template lwc:if={selectedValue}>
+                <p>You have Selected {selectedValue} State</p>
+            </template>
+        
+
+        <!-- Conditionally display below paragraph -->
+        <template lwc:if={isCapitalArea}> 
+            <p>You have selected Capital Area</p>
+        </template>
+        
+
+      </div>
+  
+    </lightning-card>
+  </template>
+ 
