@@ -9,6 +9,9 @@
         onchange={handleToggleChange}
         ></lightning-input>   
 
+        <!-- The below code called conditional rendering 
+        Conditional displaying element using lwc:if directive inside 
+        <template> tag -->
         <template lwc:if={on}>
             <p>This should show when the switch is on</p>
         </template>

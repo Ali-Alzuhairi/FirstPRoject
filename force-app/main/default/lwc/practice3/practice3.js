@@ -10,12 +10,14 @@ export default class Practice3 extends LightningElement {
      * The method that get called by the result 
      * of the onchange event can have access to 
      * the details of the event using method parameter 
+     * event just a name we give for the below code we can call it anything we want
      */
     handleChange(event){
         // console.log('User typed something');
         // event contains all the details about the onchange event 
         // including the target element that fired this function to get executed
-        // event.target will return the same element that fired the event
+        // event.target 
+        // will return the same element that fired the event
         // console.log(event);
         // we can get all it's attribute of the element 
         // and the value attribute is the one that store what user typed

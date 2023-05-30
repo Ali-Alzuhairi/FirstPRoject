@@ -5,6 +5,7 @@ export default class Practice7 extends LightningElement {
     on = false;
 
     get theLabel (){
+        // this is ternary operator
        return this.on? 'Off' : 'On';
     }
 
