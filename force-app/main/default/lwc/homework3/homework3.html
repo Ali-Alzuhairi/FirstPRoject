@@ -1,0 +1,20 @@
+<template>
+    
+    <lightning-card title="Account Table" icon-name="standard:account">
+        <div class="slds-var-m-around_medium">
+
+            <template lwc:if={filteredAccount} >
+                <!-- sldsValidatorIgnoreNextLine -->
+                <lightning-datatable
+
+                    key-field="Id"
+                    data={filteredAccount}
+                    columns={columns}
+               
+                ></lightning-datatable>
+
+            </template>
+        </div>
+    </lightning-card>
+
+</template>
