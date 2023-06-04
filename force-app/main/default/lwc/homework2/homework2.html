@@ -1,0 +1,27 @@
+<template>
+    
+    <lightning-card title="jobList" icon-name="standard:account">
+        <div class="slds-var-m-around_medium">
+
+            <lightning-input
+            type="search"
+            label="Search Job"
+            placeholder="type here..."
+            value={searchKey}
+            onchange={handleSearchKeyChange}
+          ></lightning-input>
+
+          <template lwc:if={searchKey}>
+          <template  for:each={filteredJobs} for:item="con">
+            <p key={con.Id}>
+                Job name: {con.jobTitle}, Location: {con.location}, Salary: {con.salary}
+            </p>
+        </template>
+    </template>
+          
+          
+
+        </div>
+    </lightning-card>
+
+</template>

@@ -1,13 +1,7 @@
 import { LightningElement } from "lwc";
-export default class Homework1 extends LightningElement {
+export default class Homework2 extends LightningElement {
 
-    searchKey = ''; 
-
-    columns = [
-        { label: 'jobTitle', fieldName: 'jobTitle' },
-        { label: 'location', fieldName: 'location' },
-        { label: 'salary', fieldName: 'salary' },
-    ];
+    searchKey = '';
 
     jobs = [
     { jobId: 1, jobTitle: 'Salesforce Administrator', location: 'San Francisco', salary: 95000 },
@@ -32,5 +26,4 @@ export default class Homework1 extends LightningElement {
         each.jobTitle.toLowerCase().includes( this.searchKey.toLowerCase() )
     );
 }
-
 }
