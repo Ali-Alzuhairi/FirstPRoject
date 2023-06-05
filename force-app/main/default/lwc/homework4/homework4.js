@@ -1,7 +1,7 @@
 import { LightningElement, wire } from "lwc";
 import getAccountWithAnnualRevenue from "@salesforce/apex/AccountController.getAccountWithAnnualRevenue";
 
-export default class practice17Homework4 extends LightningElement {
+export default class homework4 extends LightningElement {
   sliderValue = 50000;
   //property to store the result.data portion of wired result
   accounts;

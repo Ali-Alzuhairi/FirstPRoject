@@ -21,7 +21,7 @@ export default class practice22 extends LightningElement {
         
         const showToastEvent = new ShowToastEvent({
             title: 'Successfully Created',
-            message: 'You have created account successfully',
+            message: 'You have created account successfully'+ event.detail.id,
             variant: 'success'
         }); 
 

@@ -1,0 +1,24 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    
+    <lightning-card title="Opportunity Search" icon-name="standard:account">
+        <div class="slds-var-m-around_medium">  
+
+            <lightning-slider 
+                label="Opps Amount" 
+                value={sliderValue}
+                onchange={handleSliderChange}
+                max="1000000"
+                step="1000"
+            ></lightning-slider>
+
+            <template lwc:if={myOpps.data}>
+            <lightning-datatable
+            key-field="id"
+            data={myOpps.data}
+            columns={columns}
+        ></lightning-datatable>
+    </template>
+        </div>
+    </lightning-card>
+</template>
