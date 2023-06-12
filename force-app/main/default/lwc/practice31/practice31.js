@@ -1,9 +1,11 @@
-import { LightningElement } from "lwc";
+import { LightningElement, wire } from "lwc";
 import { NavigationMixin } from 'lightning/navigation';
+import getOneContact from "@salesforce/apex/ContactController.getOneContact";
 
 export default class Practice31 extends NavigationMixin(LightningElement) {
 
-
+    @wire(getOneContact)
+    myContact;  // {data}
 
     handleNavigateToHome() {
         console.log('Navigating to Home Page');
@@ -34,48 +36,51 @@ export default class Practice31 extends NavigationMixin(LightningElement) {
 
     }
 
-
-    handleNavigateToCaseHome(){
-        //lwcNav
+    handleNavigateToCaseHome() {
+        
+        // lwc-nav-object-page
         this[NavigationMixin.Navigate]({
             type: 'standard__objectPage',
             attributes: {
-                //actionName:"home"
                 actionName: "home",
+                // actionName:"list",
                 objectApiName: "Case"
             },
-            state:{
-                filterName :"00BDn00000IfgbBMAR"
-            }
-
+            // state: {
+            //     filterName:"00BDm000003yv9VMAQ"
+            // }
         });
 
     }
 
-
-    handleNavigateToAccountCreation(){
-
+    handleNavigateToAccountCreation() {
+        
         this[NavigationMixin.Navigate]({
             type: 'standard__objectPage',
             attributes: {
                 actionName: "new",
                 objectApiName: "Account"
-            },
+            }, 
             state: {
                 defaultFieldValues : "Name=DefaultName,Phone=123456789"
             }
+
         });
+
     }
 
-    handleNavigateToRecordPage(){
+    handleNavigateToRecordPage() {
+        
         this[NavigationMixin.Navigate]({
             type: 'standard__recordPage',
             attributes: {
-                actionName: "edit",
-                recordId: "003Dn000009yGasIAE",
-                objectApiName: "Contact"
+                actionName: "view",
+                // actionName: "edit",
+                recordId: this.myContact.data.Id ,                  // "003Dm000004bW3tIAE",
+                // objectApiName: "Contact"
             }
         });
+
     }
 
 }
