@@ -1,7 +1,8 @@
 {
-  "orgName": "alialzuhairi company",
-  "edition": "Developer",
+  "orgName": "Scratch org1",
+  "edition": "Enterprise",
   "features": ["EnableSetPasswordInApi"],
+  "hasSampleData": true,
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
