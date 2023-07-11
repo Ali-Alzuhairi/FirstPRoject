@@ -37,10 +37,10 @@ System.debug('Is Num2 Less Than Num3 : ' + isNum2LessThanNum3);
 // Compare num1 is greater than or equals num3 and directly print out the result
 // in this format : Is Num1 Greater Than Num3 : falseOrTrue
 
-// use paranthesis to see (num1 >= num3) as one then concatenate
+// use parenthesis to see (num1 >= num3) as one then concatenate
 System.debug('Is Num1 Greater Than Or Equals Num3 : ' + (num1 >= num3));
 
-// == checking for eqality of 2 items , = is assignment operator
+// == checking for equality of 2 items , = is assignment operator
 // check if num3 value is 30 or not
 
 System.debug('Is num3 and num2 equal? : ' + (num3 == num2));
@@ -114,7 +114,7 @@ Integer age = 20;
 ++age; // 21
 System.debug('age is ' + age);
 
-// Increament and Decreament operators to increase|decrease the value by one
+// Increment and Decrement operators to increase|decrease the value by one
 
 // ++ used in the beginning of the variable is called pre-increment  ++score
 // ++ used in the end of the variable is called post-increment  score++
