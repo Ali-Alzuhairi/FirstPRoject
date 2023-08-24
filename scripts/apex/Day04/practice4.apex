@@ -11,7 +11,7 @@ switch on season {
         System.debug(' Go Swimming ');
     }
     when 'fall'{
-        System.debug('Go Pick Pumkin');
+        System.debug('Go Pick Pumpkin');
     }
     when 'winter'{
         System.debug('Go Skiing');
@@ -24,12 +24,12 @@ switch on season {
 
 
 
-// Declare a varible called dayCode as Integer 
+// Declare a variable called dayCode as Integer 
 // initialize it's value 
 
 // check if the dayCode value is 1,2,3,4,5 
 // if it's print weekday 
-// if it is 6 and 7 print weekand 
+// if it is 6 and 7 print weekend 
 // else invalid day code 
 
 Integer dayCode = 5;
@@ -37,7 +37,7 @@ if (dayCode==1 || dayCode==2 || dayCode==3 || dayCode==4 || dayCode==5){
     System.debug ('Weekdays ');
 
 }else if (dayCode==6 || dayCode ==7){
-    System.debug('weekand');
+    System.debug('weekend');
 }else{
     System.debug( 'invalid day ');
 }
