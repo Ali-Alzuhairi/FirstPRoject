@@ -1,8 +1,8 @@
 AggregateResult oppResult = [
   SELECT
-    COUNT(Id) CountOfOpps,
-    MIN(Amount) LowestAmount,
-    MAX(CreatedDate) LastestOppCreatedDate
+  COUNT(Id) CountOfOpps,
+  MIN(Amount) LowestAmount,
+  MAX(CreatedDate) LatestOppCreatedDate
   FROM OPPORTUNITY
 ];
 
@@ -11,7 +11,7 @@ System.debug('MIN(Amount) is ' + oppResult.get('LowestAmount'));
 
 Integer count       = (Integer) oppResult.get('CountOfOpps');
 Decimal amount      = (Decimal) oppResult.get('LowestAmount');
-DateTime latestDate = (DateTime) oppResult.get('LastestOppCreatedDate');
+DateTime latestDate = (DateTime) oppResult.get('LatestOppCreatedDate');
 
 System.debug('count value is : ' + count);
 System.debug('amount value is : ' + amount);
