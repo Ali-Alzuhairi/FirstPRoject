@@ -1,7 +1,7 @@
 // SELECT Count(ID) FROM Account 
 
 AggregateResult result = [SELECT Count(ID), MAX(AnnualRevenue) 
-                            FROM Account ] ; 
+                          FROM Account ] ; 
 System.debug('result value is : ' + result);
 // get the count value out of AggregateResult
 // we have get method that accept the column name and return the value 
